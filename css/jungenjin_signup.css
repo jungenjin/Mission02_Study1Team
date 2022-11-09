@@ -136,13 +136,13 @@ legend {
    width: 346px;
    height: 30px;
 }
-.write_hp{
-   width: 142px;
-   height: 30px;
-}
 .write_em {
    width: 160px;
    height: 30px;
+}
+.write_tel {
+   width: 260px;
+   height: 16px;
 }
 .address {
    margin: 5px 0 0 0;
@@ -151,7 +151,7 @@ legend {
 .purpose {
    margin: 5px 0 0 0;
    width: 346px;
-   height: 104px;
+   height: 90px;
    resize: none;
 }
 /* button */
@@ -166,6 +166,9 @@ legend {
 .submit_url {
    margin: 5px 0 0 282px;
    width: 68px;
+}
+.submit_tel {
+   width: 40px;
 }
 /* 만월당 시작하기 */
 .button {
