@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>KONG82 | 회원가입 / 로그인</title>
+  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+	
+
+	<link rel="stylesheet" href="/css/kopureum_signup.css">
+
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+</head>
+
+<body>
+
+  <nav class="main-nav">
+	<ul>
+		<li><a class="signin" href="#0">로그인</a></li>
+		<li><a class="signup" href="#0">회원가입</a></li>
+	</ul>
+</nav>
+
+<div class="user-modal">
+		<div class="user-modal-container">
+			<ul class="switcher">
+				<li><a href="#0">로그인</a></li>
+				<li><a href="#0">회원가입</a></li>
+			</ul>
+
+			<div id="login">
+				<form class="form">
+					<p class="fieldset">
+						<span class="material-symbols-outlined">mail</span>
+						<label class="image-replace email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="error-message">유효한 이메일을 입력해주세요</span>
+					</p>
+
+					<p class="fieldset">
+						<span class="material-symbols-outlined">key</span>
+						<label class="image-replace password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password">
+						<a href="#0" class="hide-password">show</a>
+						<span class="error-message">잘못 누르셨네요, 다시 입력해 보세요</span>
+					</p>
+
+					<p class="fieldset">
+						<span class="material-symbols-outlined">bookmark_added</span>
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">아이디 기억하기</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login">
+					</p>
+				</form>
+				
+				<p class="form-bottom-message"><a href="#0">비밀번호 찾기</a></p>
+				
+			</div>
+
+			<div id="signup">
+				<form class="form">
+					<p class="fieldset">
+						<span class="material-symbols-outlined">person</span>
+						<label class="image-replace username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="error-message">아이디는 숫자와 알파벳 기호만 포함할 수 있어요</span>
+					</p>
+
+					<p class="fieldset">
+						<span class="material-symbols-outlined">mail</span>
+						<label class="image-replace email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="error-message">유효한 메일주소를 입력해주세요</span>
+					</p>
+
+					<p class="fieldset">
+						<span class="material-symbols-outlined">key</span>
+						<label class="image-replace password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+						<a href="#0" class="hide-password">Show</a>
+						<span class="error-message">6자 이상으로 입력해주세용</span>
+					</p>
+
+					<p class="fieldset">
+						<label for="accept-terms"><a class="accept-terms" href="#0">가입 약관</a>에 동의합니다.</label>
+						<input type="checkbox" id="accept-terms">
+						<br>
+						<label for="accept-terms">이벤트 응모에 동의합니다.</label>
+						<input type="checkbox" id="accept-terms">
+					</p>
+
+					<p class="fieldset"><hr></p>
+						<p class="event_head">이벤트에 참여시 기념일에 선물을 보내드립니다 <br>추가 정보를 등록 해주세요!</p>
+						
+					</p>	
+					
+					<p class="fieldset" >
+						<fieldset class="post">
+							<legend class="post">주소 등록하기</legend>
+							<input type="text" id="sample6_postcode" placeholder="우편번호">
+							<input type="button" onclick="sample6_execDaumPostcode()" value="search"><br>
+							<input type="text" id="sample6_address" placeholder="주소"><br>
+							<input type="hidden" id="sample6_detailAddress" placeholder="상세주소">
+							<input class="hidden" type="text" id="sample6_extraAddress" placeholder="상세주소2">
+							
+						</fieldset>
+					</p>
+
+
+					<p class="fieldset">
+						<label class="image-replace phone" for="signin-phone">Phone Number</label>
+						<span class="material-symbols-outlined">phone_enabled</span>
+						<input type="tel" for="Phone" class="full-width has-padding has-border" id="Phone" placeholder="Phone Number : 010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required></input>
+						<span class="error-message">유효한 전화번호가 아닙니다</span>
+					</p>
+
+					<fieldset class="anniversary">
+						<legend class="anniversary">기념일을 선택 해주세요</legend>
+					 <p class="anniversary">
+						<label class="anniversary" id="anniversary" type="date" placeholder="anniversary"></label>
+						<input type="date" for="anniversary" class="full-width has-padding has-border" id="anniversary" value="Submit">
+					 </p>
+
+					 <p class="anniversary">
+						<label class="anniversary" for="생일">생일</label>
+						<input type="radio" id="생일" name="생일" value="생일">
+					 </p>
+					 <p class="anniversary">
+						<label class="anniversary" for="결혼 기념일">결혼 기념일</label>
+						<input type="radio" id="결혼 기념일" name="결혼 기념일" value="결혼 기념일">
+					 </p>
+					 <p class="anniversary">
+						<label class="anniversary" for="기념일">기타 기념일</label>
+						<input type="radio" id="기념일" name="기념일" value="기념일">
+				</fieldset>
+				</p>
+
+					<p>가장 좋아하는 <strong>색상</strong>을 아래에서 선택해 주세요!</p>
+
+					<form action="/action_page.php">
+					<label for="favcolor">좋아하는 색 클릭!:</label>
+					<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Create account">
+					</p>
+				</form>
+
+			</div>
+
+			<div id="reset-password">
+				<p class="form-message">E-mail 주소를 입력해주세요</br> 새 비밀번호를 설정하실 수 있도록 링크를 쏴드리죠!</p>
+
+				<form class="form">
+					<p class="fieldset">
+						<label class="image-replace email" for="reset-email">이메일</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="error-message">유효한 메일주소를 입력해주세요</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="form-bottom-message"><a href="#0">로그인 화면으로 돌아가기</a></p>
+			</div>
+			<a href="#0" class="close-form">닫기</a>
+		</div>
+	</div>
+  <script src="/javascript/kopureum_signup.js"></script>
+
+
+</body>
+
+</html>
