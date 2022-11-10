@@ -24,6 +24,7 @@
          .tag {margin-left : 150px; border: 2px solid black; width: 200px; text-align: center; color: white; background-color: lightgray;}
 
     </style>
+
 </head>
 <body>
     <main id="main">
@@ -35,9 +36,9 @@
             <!-- 필수정보 : 이름,ID,비밀번호,비밀번호 확인 > 리퀴드 사용 != or == -->
             <!-- 비밀번호 확인 -->
             <legend class="lgd">홈페이지 가입 필수 정보</legend>
-            성함 : <br><input type="text" id="username"><br>
-             ID : <br><input type="text" id="userid"> <button>중복 확인</button><br>
-            PW : <br><input type="password" id="userpw"><br>
+            성함 : <br><input type="text" id="username" required="required" ><br>
+             ID : <br><input type="text" id="userid" required="required" > <button>중복 확인</button><br>
+            PW : <br><input type="password" id="userpw" required="required" ><br>
             PW 확인 :<br><input type="password" id="pwcheck" required="required" placeholder="password 다시 입력"><br><br>
                 <div>
                     <button>확인</button>
