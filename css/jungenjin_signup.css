@@ -142,7 +142,10 @@ legend {
 }
 .write_tel {
    width: 252px;
-   height: 16px;
+   height: 30px;
+}
+select {
+   height: 30px;
 }
 .address {
    margin: 5px 0 0 0;
@@ -158,6 +161,7 @@ legend {
 .submit {
    margin: 5px 0 0 310px;
    width: 40px;
+   height: 30px;
 }
 .address_button {
    width: 100px;
@@ -166,9 +170,11 @@ legend {
 .submit_url {
    margin: 5px 0 0 282px;
    width: 68px;
+   height: 30px;
 }
 .submit_tel {
    width: 40px;
+   height: 30px;
 }
 /* 만월당 시작하기 */
 .button {
